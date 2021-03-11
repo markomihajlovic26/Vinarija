@@ -210,24 +210,3 @@ body{
 #greskaImePrezime{
 	display:none;
 }
-#footer{
-	display: flex;
-	justify-content:space-around;
-	background-color: rgba(216, 216, 216, 0.5);
-	padding: 20px;
-	min-height: 150px;
-	
-   }
-   #footer ul li{
-	list-style: none;
-	font-size: 15px;
-	line-height: 1.8;
-   }
-   #drMreze a{
-	margin-top: 13px;
-	margin-left: 15px;
-	color:#111111;
-   }
-   #drMreze a:hover{
-	color: rgb(115, 164, 255);
-   }
