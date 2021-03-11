@@ -78,7 +78,7 @@ createWine = function(element){
 	var div = document.createElement("div");
 		div.className = "wine";
 		var img = document.createElement("img");
-		img.src = "https://jovanpetkovic.github.io/Vinarija/images/" + element.picture;
+		img.src = "https://markomihajlovic26.github.io/Vinarija/images/" + element.picture;
 		div.appendChild(img);
 		var h3 = document.createElement("h3");
 		h3.innerHTML = element.name;
