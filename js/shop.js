@@ -12,6 +12,7 @@ var copyData;
 
 onLoad = function(){
 	ourData = JSON.parse(ourRequest.responseText);
+	copyData = ourData;
 	var shop = document.getElementById("shop");
 	ourData.forEach( function(element, index) {
 		createWine(element);
@@ -199,4 +200,4 @@ createWine = function(element){
 }
 
 
-setTimeout(() => {  clickSort(); }, 2000);
+clickSort();
