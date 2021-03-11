@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+html, body{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	margin: 0;
+	color: white;
+	font-size: 96px;
+	font-weight: bold;
+}
+
+body{
+	font-family: Raleway;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container{
+	width: 1024px !important;
+}
+
+#hero{
+	font-family: Dancing Script;
+	display: flex;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/hero.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items:center;
+}
+
+.shop{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#minishop{
+	display: flex;
+	width: 100%;
+	height: 80vh;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.miniwine{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 25%;
+	height: 100%;
+	/*border: 1px solid black;*/
+	margin: 30px 0;
+}
+.miniwine img{
+	margin: 10px;
+	width: auto;
+	height: 40%;
+
+}
+.miniwine p{
+	text-align: justify;
+	margin: 3px;
+	width: 250px;
+}
+
+#forma{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0;
+}
+
+#levo input{
+	display: flex;
+	align-items: center;
+	
+}
+#desno{
+	width: 50%;
+	background-color: #111111;
+	height:100%;
+}
+.podnaslov{
+	display: flex;
+	justify-content: center;
+}
+#levo{
+	color: white;
+	background-color: #111111;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+#tekst{
+	width: 50%;
+	height: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#tekst p{
+	width: 80%;
+}
+
+#about{
+	height: 400px;
+	background-color: #541218;
+	display:flex;
+	justify-content: center;
+}
+
+#about1{
+	display: flex;
+	align-items: center;
+}
+
+#slika{
+	width: 50%;
+	height: 100%;
+	background-image: url("../images/about.jpg");
+	background-size: cover;
+}
+
+.half-container-left{
+	width: 512px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.half-container-right{
+	width: 512px;
+	position: relative;
+	height: 100%;
+	top: 0;
+	right: 50%;
+	transform: translateX(-50%);
+}
+
+#formaKontakt{
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#formaKontakt input{
+	width: 70%;
+	border: none;
+	border-bottom: 1px #541218 solid;
+	height: 30px;
+	color: white;
+	background-color: transparent;
+}
+
+#formaKontakt input:focus{
+	outline: none;
+	border-bottom: 2px #541218 solid;
+}
+
+#poruka {
+	width: 70%;
+	height: 100px;
+	resize: none;
+	background-color: transparent;
+	border: 1px #541218 solid;
+	color: white;
+	font-family: sans-serif;
+}
+
+#poruka:focus{
+	outline: none;
+	border: 2px #541218 solid;
+}
+
+#formaKontakt #posalji {
+	height: 40px;
+	width: 160px;
+	border-radius: 15px;
+	outline: none;
+	border: none;
+	background-color: #541218;
+	color: white;
+	margin: 0;
+	box-shadow: 0px 2px 1px rgba(0,0,0,0.7);
+}
+
+#map{
+	height: 100%;
+	width: 512px;
+}
+
+#greskaImePrezime{
+	display:none;
+}

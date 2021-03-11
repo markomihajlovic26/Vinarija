@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #111111;
+}
+
+.container{
+	width: 1024px !important;
+	height: 100%;
+}
+
+#background{
+	background-color: #111111;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.wine{
+	font-family: Raleway;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 25%;
+	/*border: 1px solid black;*/
+	padding: 10px;
+	margin-top: 20px;
+	border: 2px #541218 solid;
+}
+.wine img{
+	margin: 10px;
+	width: auto;
+	height: 200px;
+
+}
+.wine p{
+	text-align: justify;
+	margin-top: 5px;
+	width: 250px;
+}
+
+#shop{
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#filter{
+	font-family: Raleway;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-650px);
+	top: 60px;
+}
+
+#filter h4{
+	margin-bottom: 5px;
+}

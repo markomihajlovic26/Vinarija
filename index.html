@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vinarija</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+</head>
+<body>
+	<header>
+		<div class="container" id="header">
+			<a href="index.html" id="logo"></a>
+			<div id="nav">
+				<a href="shop.html">Shop</a>
+				<a href="">O Nama</a>
+				<a href="">Kontakt</a>
+				<a href="">O Autoru</a>
+				<a href="cart.html" id="cart"></a>
+			</div>
+		</div>
+	</header>
+	<div id="hero">
+		<h1>Mesto Najboljih Vina</h1>
+	</div>
+	<div class="shop">
+		<div class="container" id="minishop">
+			<div class="miniwine">
+				<img src="images/belo.jpg" alt="slika1">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, 
+					fugit? Asperiores eligendi magni unde ipsa!</p>
+				<input type="button" name="btn1" value="Kupite odmah" class="btn">
+			</div>
+			<div class="miniwine"><img src="images/belo.jpg" alt="slika1">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, 
+					fugit? Asperiores eligendi magni unde ipsa!</p>
+				<input type="button" name="btn1" value="Kupite odmah" class="btn">
+			</div>
+			<div class="miniwine"><img src="images/belo.jpg" alt="slika1">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, nemo nemo
+					fugit? Asperiores eligendi magni unde ipsa!</p>
+				<input type="button" name="btn1" value="Kupite odmah" class="btn">
+			</div>
+		</div>
+	</div>
+	<div id="about">]
+		<div class="container" id="about1">
+			<div id="tekst">
+				<h2>Vino je nasa tradicija</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac risus sed orci congue scelerisque nec euismod leo. Vivamus ac orci id arcu sagittis aliquam et ac sem. Quisque a orci eu purus rhoncus interdum. In venenatis velit et ipsum malesuada, vehicula dapibus purus pellentesque. Morbi ut vestibulum odio. Nunc fringilla ultrices massa, eu tincidunt augue tincidunt at. Nullam sit amet semper odio. Duis rhoncus leo magna, sagittis imperdiet arcu feugiat eget. Fusce elementum velit eget nisi efficitur, nec varius nulla tempus. </p>
+			</div>
+			<div id="slika"></div>
+		</div>
+	</div>
+
+	<div id="forma">
+		<div id="levo">
+			<div class="half-container-left">
+					<form id="formaKontakt" action="#" method="POST" onSubmit=" return provera();">
+					<h2 class="podnaslov">Kontaktirajte Nas</h2>
+					<input type="text" id="imePrezime" name="imePrezime" placeholder="Ime i Prezime"/>
+					<span id="greskaImePrezime" class="greska">Pogrešno uneto ime i prezime <br/>
+						<i>Format (prvo veliko slovo, rec ne sme biti duza od 20 karaktera)</i></span>					<input type="text" id="email" name="email" placeholder="Email"/>
+					<input type="text" id="telefon" name="telefon" placeholder="Telefon"/>
+					<textarea id="poruka"></textarea>
+					<input id="posalji" type="submit" value="Pošalji"/>
+					</form>
+			</div>
+		</div>
+		<div id="desno">
+			<div id="map"></div>
+		</div>
+</div>
+<!--
+	Dark Orange: 99300A
+	Bordo: 541218
+-->
+</body>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnseNbYcVMHac2JSueDnBGmSmVzzva0qA&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+</html>
