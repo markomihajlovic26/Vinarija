@@ -4,7 +4,11 @@ var godine = document.getElementsByClassName("godina");
 var checkGodine = new Array();
 var checkDrzave = new Array();
 var ourData = new Array();
-
+var cenaRastuce = document.getElementById("cenaRastuce");
+var cenaOpadajuce = document.getElementById("cenaOpadajuce");
+var imeRastuce = document.getElementById("imeRastuce");
+var imeOpadajuce = document.getElementById("imeOpadajuce");
+var copyData;
 
 onLoad = function(){
 	ourData = JSON.parse(ourRequest.responseText);
@@ -34,7 +38,101 @@ onLoad = function(){
 
 };
 
-// Bla bla
+
+clickSort = function(){
+	copyData = ourData;
+	cenaRastuce.addEventListener("click", function(){
+		sortiraj(true, false);
+		ispisiSort(copyData);
+	});
+	cenaOpadajuce.addEventListener("click", function(){
+		sortiraj(false, false);
+		ispisiSort(copyData);
+	});
+	imeRastuce.addEventListener("click", function(){
+		sortiraj(true, true);
+		ispisiSort(copyData);
+	});
+	imeOpadajuce.addEventListener("click", function(){
+		sortiraj(false, true);
+		ispisiSort(copyData);
+	});
+}
+
+var bool;
+sortiraj = function(rastuci,ime){
+	var a;
+	if(rastuci){
+		if(ime){
+			for(let i = 0, length1 = copyData.length; i < length1; i++){
+				for(let j = i+1, length2 = copyData.length; j < length2; j++){
+					uporedi(copyData[i].name,copyData[j].name);
+					if(bool){
+						a = copyData[i];
+						copyData[i] = copyData[j];
+						copyData[j] = a;
+					}
+				}
+			}
+		}
+		else{
+			console.log(copyData.length);
+			for(let i = 0, length1 = copyData.length; i < length1; i++){
+				for(let j = i+1, length2 = copyData.length; j < length2; j++){
+					uporedi(copyData[i].price,copyData[j].price);
+					if(bool){
+						a = copyData[i];
+						copyData[i] = copyData[j];
+						copyData[j] = a;
+					}
+				}
+			}
+		}
+	}
+	else{
+		if(ime){
+			for(let i = 0, length1 = copyData.length; i < length1; i++){
+				for(let j = i+1, length2 = copyData.length; j < length2; j++){
+					uporedi(copyData[i].name,copyData[j].name);
+					if(!bool){
+						a = copyData[i];
+						copyData[i] = copyData[j];
+						copyData[j] = a;
+					}
+				}
+			}
+		}
+		else{
+			for(let i = 0, length1 = copyData.length; i < length1; i++){
+				for(let j = i+1, length2 = copyData.length; j < length2; j++){
+					uporedi(copyData[i].price,copyData[j].price);
+					if(!bool){
+						a = copyData[i];
+						copyData[i] = copyData[j];
+						copyData[j] = a;
+					}
+				}
+			}
+		}
+	}
+}
+
+uporedi = function(obj1,obj2){
+	if(obj1>obj2){
+		bool=true;
+	}
+	else{
+		bool=false;
+	}
+}
+
+ispisiSort = function(data){
+	document.getElementById("shop").innerHTML = "";
+	for(let i = 0, length1 = data.length; i < length1; i++){
+		createWine(data[i]);
+	}
+}
+
 ourRequest.addEventListener('load', onLoad);
 ourRequest.open('GET' , 'https://markomihajlovic26.github.io/Vinarija/data/wines.json');
 ourRequest.send();
@@ -101,3 +199,4 @@ createWine = function(element){
 }
 
 
+setTimeout(() => {  clickSort(); }, 2000);
