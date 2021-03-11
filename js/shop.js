@@ -14,24 +14,18 @@ onLoad = function(){
 	});
 
 	for(let i = 0, length1 = drzave.length; i < length1; i++){
-		console.log(drzave[i].getElementsByTagName("input"));
 		drzave[i].getElementsByTagName("input")[0].addEventListener("click",function(){
 			var ime = this.parentElement.getElementsByTagName("label")[0].innerHTML; 
 			izbaciUbaci(ime, checkDrzave);
-			console.log(checkDrzave);
-			
 			promeniContent();
 		})
 
 	}
 
 	for(let i = 0, length1 = godine.length; i < length1; i++){
-		console.log(godine[i].getElementsByTagName("input"));
 		godine[i].getElementsByTagName("input")[0].addEventListener("click",function(){
 			var ime = this.parentElement.getElementsByTagName("label")[0].innerHTML; 
 			izbaciUbaci(ime, checkGodine);
-			console.log(checkGodine);
-			
 			promeniContent();
 		})
 
@@ -60,7 +54,11 @@ promeniContent = function(){
 			}
 		}
 	}
-
+	if(checkGodine.length==0&&checkDrzave.length===0){
+		ourData.forEach( function(element, index) {
+		createWine(element);
+	});
+	}
 }
 
 izbaciUbaci = function(ime, niz){
@@ -86,11 +84,14 @@ createWine = function(element){
 		var p1 = document.createElement("p");
 		var p2 = document.createElement("p");
 		var p3 = document.createElement("p");
+		var p4 = document.createElement("p");
 		p1.innerHTML = "Drzava: " + element.country;
 		p2.innerHTML = "Godina: " + element.year;
 		p3.innerHTML = element.description;
+		p4.innerHTML = "Cena: " + element.price + "e";
 		div.appendChild(p1);
 		div.appendChild(p2);
+		div.appendChild(p4);
 		div.appendChild(p3);
 		var btn = document.createElement("button");
 		btn.className = "btn";
