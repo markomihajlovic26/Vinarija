@@ -64,3 +64,8 @@ html, body{
 #filter h4{
 	margin-bottom: 5px;
 }
+
+select{
+	margin-top: 10px;
+	width: 90px;
+}
